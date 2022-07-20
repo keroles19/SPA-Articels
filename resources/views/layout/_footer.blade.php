@@ -61,7 +61,6 @@
 <!--/ add new card modal  -->
 
 <script src="{{asset('assets/js/jquery-3.5.1.min.js')}}"></script>
-<script src="{{asset('app-assets/vendors/js/vendors.min.js')}}"></script>
 
 <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
 
@@ -72,8 +71,9 @@
 <script src="{{asset('assets/js/theme.js')}}"></script>
 
 
-<script src="{{asset('app-assets/vendors/js/extensions/sweetalert2.all.min.js')}}"></script>
-<script src="{{asset('app-assets/vendors/js/extensions/polyfill.min.js')}}"></script>
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}" defer></script>
+
 @include('partials.swal')
 @yield('js')
 </body>

@@ -2,6 +2,12 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
+use Database\Factories\CategoryFactory;
+use Database\Factories\CommentFactory;
+use Database\Factories\PostFactory;
+use Database\Factories\UserFactory;
+use Hamcrest\Thingy;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,11 +20,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+//         \App\Models\User::factory()->create([
+//             'name' => 'Test User',
+//             'email' => 'test@example.com',
+//         ]);
+
+
+        $this->call([
+            UserSeeder::class,
+           CategorySeeder::class,
+           PostSeeder::class,
+           CommentSeeder::class
+        ]);
     }
 }

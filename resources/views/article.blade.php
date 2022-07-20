@@ -4,8 +4,6 @@
 
     {{--    @include('front.layout._crumb',['page_name'=>'Article'])--}}
 
-
-
     <div class="page-section">
         <div class="container">
             <div class="row">
