@@ -9,7 +9,12 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $casts = [
+      'created_at'=> 'datetime:Y-m-d H:00'
+    ];
+
     public $guarded = [''];
+
     public function category(){
         return $this->belongsTo(Category::class);
     }

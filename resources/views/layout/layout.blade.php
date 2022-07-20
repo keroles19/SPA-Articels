@@ -1,9 +1,10 @@
 @include('layout._header')
-<div class="back-to-top " id="app"></div>
+<div class="back-to-top"></div>
 @include('layout._navbar')
 
-@yield('content')
-
+<div id="app">
+    @yield('content')
+</div>
 @include('layout._footer')
 
 
